@@ -17,6 +17,8 @@
 		7F00AB802BFC8DF700A5FF87 /* PracticeLesson3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00AB7F2BFC8DF700A5FF87 /* PracticeLesson3.swift */; };
 		7F00AB842BFDC34D00A5FF87 /* Lesson4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00AB832BFDC34D00A5FF87 /* Lesson4.swift */; };
 		7F00AB862BFDC92900A5FF87 /* Lesson4Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00AB852BFDC92900A5FF87 /* Lesson4Practice.swift */; };
+		7F00AB892BFDEA1400A5FF87 /* Lesson5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00AB882BFDEA1400A5FF87 /* Lesson5.swift */; };
+		7F00AB8B2BFDEA1D00A5FF87 /* Lesson5Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00AB8A2BFDEA1D00A5FF87 /* Lesson5Practice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		7F00AB7F2BFC8DF700A5FF87 /* PracticeLesson3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeLesson3.swift; sourceTree = "<group>"; };
 		7F00AB832BFDC34D00A5FF87 /* Lesson4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson4.swift; sourceTree = "<group>"; };
 		7F00AB852BFDC92900A5FF87 /* Lesson4Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson4Practice.swift; sourceTree = "<group>"; };
+		7F00AB882BFDEA1400A5FF87 /* Lesson5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson5.swift; sourceTree = "<group>"; };
+		7F00AB8A2BFDEA1D00A5FF87 /* Lesson5Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson5Practice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 		7F00AB682BFBC71000A5FF87 /* combineRoadmap */ = {
 			isa = PBXGroup;
 			children = (
+				7F00AB872BFDEA0800A5FF87 /* Lesson5 */,
 				7F00AB822BFDC34200A5FF87 /* Lesson4 */,
 				7F00AB7C2BFC8DD600A5FF87 /* Lesson3 */,
 				7F00AB792BFC881500A5FF87 /* Lesson2 */,
@@ -107,6 +112,15 @@
 				7F00AB852BFDC92900A5FF87 /* Lesson4Practice.swift */,
 			);
 			path = Lesson4;
+			sourceTree = "<group>";
+		};
+		7F00AB872BFDEA0800A5FF87 /* Lesson5 */ = {
+			isa = PBXGroup;
+			children = (
+				7F00AB882BFDEA1400A5FF87 /* Lesson5.swift */,
+				7F00AB8A2BFDEA1D00A5FF87 /* Lesson5Practice.swift */,
+			);
+			path = Lesson5;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +193,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F00AB8B2BFDEA1D00A5FF87 /* Lesson5Practice.swift in Sources */,
+				7F00AB892BFDEA1400A5FF87 /* Lesson5.swift in Sources */,
 				7F00AB7E2BFC8DED00A5FF87 /* SecondPipeline.swift in Sources */,
 				7F00AB6C2BFBC71000A5FF87 /* ContentView.swift in Sources */,
 				7F00AB7B2BFC882800A5FF87 /* PracticeLesson2.swift in Sources */,
