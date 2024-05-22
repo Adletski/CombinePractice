@@ -18,17 +18,26 @@ struct Lesson4Practice: View {
                     Text(item.name)
                     Spacer()
                     Button("+") {
-                        
-                    }
-                    Button("-") {
-                        
+                        viewModel.addToBasket(item: item)
                     }
                 }
             }
             
             Text("BASKET")
             List(viewModel.basket) { item in
-                Text(item.name)
+                HStack {
+                    Text(item.name)
+                    Spacer()
+                    Text(String(item.price))
+                    Spacer()
+                    Button("-") {
+                        viewModel.removeFromBasket(item: item)
+                    }
+                }
+            }
+            Text("Total Price - \(viewModel.getBasketTotalPrice())")
+            Button("Delete all basket items") {
+                viewModel.deleteAllBasketItems()
             }
         }
     }
@@ -36,12 +45,12 @@ struct Lesson4Practice: View {
 
 class Lesson4PracticeViewModel: ObservableObject {
     @Published var shop: [Item] = [
-        Item(name: "bread"),
-        Item(name: "milk"),
-        Item(name: "coffee"),
-        Item(name: "chocolate"),
-        Item(name: "water"),
-        Item(name: "sandwich"),
+        Item(name: "bread", price: 100),
+        Item(name: "milk", price: 200),
+        Item(name: "coffee", price: 300),
+        Item(name: "chocolate", price: 400),
+        Item(name: "water", price: 500),
+        Item(name: "sandwich", price: 600),
     ]
     @Published var basket: [Item] = []
     
@@ -49,16 +58,33 @@ class Lesson4PracticeViewModel: ObservableObject {
         if let index = shop.firstIndex(where: { $0 == item }) {
             let item = shop.remove(at: index)
             basket.append(item)
+        }
     }
         
-        func removeFromBasket(item: Item) {
-            
+    func removeFromBasket(item: Item) {
+        if let index = basket.firstIndex(where: { $0 == item }) {
+            let item = basket.remove(at: index)
+            shop.append(item)
         }
+    }
+    
+    func getBasketTotalPrice() -> String {
+        var total = 0
+        basket.forEach {
+            total += $0.price
+        }
+        return String(total)
+    }
+    
+    func deleteAllBasketItems() {
+        basket = []
+    }
 }
 
 struct Item: Identifiable, Equatable {
     let id = UUID()
     let name: String
+    let price: Int
 }
 
 #Preview {
