@@ -11,7 +11,7 @@ import SwiftUI
 struct combineRoadmapApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PracticeLesson3()
         }
     }
 }
