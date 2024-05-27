@@ -9,11 +9,6 @@ import SwiftUI
 import Combine
 
 struct URLSessionDataTaskPublisherView: View {
-    private enum Constants {
-        static let pilotPrefix = "Pilot |"
-        static let errorIcon = "exclamationmark.triangle"
-    }
-    
     var body: some View {
         VStack {
             Image(.rickLogo)
@@ -63,7 +58,7 @@ struct URLSessionDataTaskPublisherView: View {
             .padding(.top, 20)
             HStack {
                 Image(.playIcon)
-                Text("\(Constants.pilotPrefix) \(episode.serialNumerTitle)")
+                Text("Pilot | \(episode.serialNumerTitle)")
                 Spacer()
                 Image(.likeEpisodeHeart)
             }
@@ -95,7 +90,7 @@ struct URLSessionDataTaskPublisherView: View {
                     .frame(height: 232)
                     .cornerRadius(8, corners: [.topLeft, .topRight])
             case .failure(_):
-                Image(systemName: Constants.errorIcon)
+                Image(systemName: "questionmark.app.dashed")
                     .frame(height: 232)
             @unknown default:
                 EmptyView()
